@@ -1,0 +1,58 @@
+﻿@model LayoutsMVC.Models.EMPDATA
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_MasterLayoutpage.cshtml";
+}
+<h2>UPDATE</h2>
+
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <td>Empno</td>
+            <td>@Html.TextBoxFor(a => a.EMPNO)</td>
+        </tr>
+        <tr>
+            <td>Ename</td>
+            <td>@Html.TextBoxFor(a => a.ENAME)</td>
+        </tr>
+        <tr>
+            <td>Job</td>
+            <td>@Html.TextBoxFor(a => a.JOB)</td>
+        </tr>
+        <tr>
+            <td>MGR</td>
+            <td>@Html.TextBoxFor(a => a.MGR)</td>
+        </tr>
+        <tr>
+            <td>Hiredate</td>
+            <td>@Html.TextBoxFor(a => a.HIREDATE)</td>
+        </tr>
+        <tr>
+            <td>Sal</td>
+            <td>@Html.TextBoxFor(a => a.SAL)</td>
+        </tr>
+        <tr>
+            <td>Comm</td>
+            <td>@Html.TextBoxFor(a => a.COMM)</td>
+        </tr>
+        <tr>
+            <td>Deptno</td>
+            <td>@Html.TextBoxFor(a => a.DEPTNO)</td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="insert" /></td>
+        </tr>
+
+
+
+    </table>
+    if (ViewBag.msg != null)
+    {
+        <h2> @ViewBag.msg</h2>
+    }
+
+
+
+}
+

@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Styles/StyleSheet1.css" rel="stylesheet" />
+    <link href="~/Styles/StyleSheet2.css" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="Main">
+
+        <img src="~/Images/mal.jpg" class="img1" />
+
+       
+
+
+    </div>
+    <div style="position:absolute; top:33%; width:100%" >
+        <ul>
+            <li><a href="/Login/LoginPage">HOME</a></li>
+            <li><a href="#Aboutus">ABOUT US</a></li>
+            <li><a href="#Bookings">BOOKINGS</a></li>
+            <li><a href="#Contactus">CONTACT US</a></li>
+        </ul>
+        
+
+    </div>
+    <div style="position:absolute; top:40%">
+        @RenderBody()
+    </div>
+</body>
+</html>

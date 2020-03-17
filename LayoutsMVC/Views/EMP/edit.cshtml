@@ -1,0 +1,67 @@
+﻿@model LayoutsMVC.Models.EMPDATA
+@{
+    ViewBag.Title = "edit";
+}
+
+<h2>edit</h2>
+@using (Html.BeginForm("extract_edit", "EMP"))
+{
+   
+        <table>
+            <tr>
+                <td>Empno</td>
+                <td>@Html.TextBoxFor(a => a.EMPNO)</td>
+            </tr>
+            <tr>
+                <td>Ename</td>
+                <td>@Html.TextBoxFor(a => a.ENAME)</td>
+            </tr>
+            <tr>
+                <td>Job</td>
+                <td>@Html.TextBoxFor(a => a.JOB)</td>
+            </tr>
+            <tr>
+                <td>MGR</td>
+                <td>@Html.TextBoxFor(a => a.MGR)</td>
+            </tr>
+            <tr>
+                <td>Hiredate</td>
+                <td>@Html.TextBoxFor(a => a.HIREDATE)</td>
+            </tr>
+            <tr>
+                <td>SAL</td>
+                <td>@Html.TextBoxFor(a => a.SAL)</td>
+            </tr>
+            <tr>
+                <td>Comm</td>
+                <td>@Html.TextBoxFor(a => a.COMM)</td>
+            </tr>
+            <tr>
+                <td>deptno</td>
+                <td>@Html.TextBoxFor(a => a.DEPTNO)</td>
+            </tr>
+
+            <tr>
+                <td><input type="submit" value="EDIT" /></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </table>
+        if (ViewBag.msg != null)
+        {
+            <h2> @ViewBag.msg</h2>
+        }
+
+
+    
+}
+<div>
+    @Html.ActionLink("Back to List", "Index");
+</div>
+

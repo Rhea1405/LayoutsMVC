@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Viewdetails";
+     Layout = "~/Views/Shared/_MasterLayoutpage.cshtml";
+}
+
+@using (Html.BeginForm("chckboxextract","Checkbox"))
+{
+    <table border="1">
+        <tr>
+            <td>EMPNO</td>
+            <td>ENAME</td>
+            <td>JOB</td>
+            <td>MGR</td>
+            <td>HIREDATE</td>
+            <td>SAL</td>
+            <td>COMM</td>
+            <td>DEPTNO</td>
+            <td><input type="submit" value="submit" /></td>
+        </tr>
+
+        @foreach (var i in ViewBag.emplist as IList<LayoutsMVC.Models.EMPDATA>)
+        {
+    <tr>
+
+        <td>@i.EMPNO</td>
+        <td>@i.ENAME</td>
+        <td>@i.JOB</td>
+        <td>@i.MGR</td>
+        <td>@i.HIREDATE</td>
+        <td>@i.SAL</td>
+        <td>@i.COMM</td>
+        <td>@i.DEPTNO</td>
+        <td>@Html.CheckBox("chckbox", new { @value=i.EMPNO })</td>
+
+    </tr>
+
+        }
+
+
+    </table>
+
+
+
+}
+
+
+
+

@@ -1,0 +1,39 @@
+﻿@model LayoutsMVC.Models.LoginValidation
+
+@{
+    ViewBag.Title = "LoginPage";
+}
+
+<h1><marquee style="color:blue;">LET'S TAKE YOU TO MALDIVES!!!</marquee></h1>
+<h3>Login with your Booking Id</h3>
+
+@using (Html.BeginForm("validatelogin", "Login"))
+{
+    <table>
+        <tr>
+            <td>Booking ID</td>
+            <td>@Html.TextBoxFor(a => a.Username)</td>
+            <td>@Html.ValidationMessageFor(a => a.Username, "", new { @class = "text-danger" })</td>
+
+
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>@Html.PasswordFor(a => a.Password)</td>
+            <td>@Html.ValidationMessageFor(a => a.Password, "", new { @class = "text-danger" })</td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit" style="border-radius:12px; background-color:aquamarine" /></td>
+        </tr>
+
+
+
+    </table>
+
+
+
+
+
+}
+
+

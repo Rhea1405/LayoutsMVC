@@ -1,0 +1,48 @@
+﻿@model IEnumerable<LayoutsMVC.Models.EMPDATA>
+@{
+    ViewBag.Title = "chckboxextract";
+}
+
+@using (Html.BeginForm())
+{
+    if (Model != null)
+    {
+    <table border="1">
+        <tr>
+            <td>EMPNO</td>
+            <td>ENAME</td>
+            <td>JOB</td>
+            <td>MGR</td>
+            <td>HIREDATE</td>
+            <td>SAL</td>
+            <td>COMM</td>
+            <td>DEPTNO</td>
+            </tr>
+
+
+
+
+            @foreach (var i in Model)
+            {
+            <tr>
+
+                <td>@i.EMPNO</td>
+                <td>@i.ENAME</td>
+                <td>@i.JOB</td>
+                <td>@i.MGR</td>
+                <td>@i.HIREDATE</td>
+                <td>@i.SAL</td>
+                <td>@i.COMM</td>
+                <td>@i.DEPTNO</td>
+
+            </tr>
+
+
+
+
+
+        }
+        </table>
+    }
+}
+
